@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  background-color: #3a4764;
+}
+
+.App {
+  max-width: 30%;
+  margin: 50px auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.screen {
+  width: 100%;
+  padding: 20px;
+  text-align: right;
+  margin: 15px 0;
+  background-color: #182034;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 32px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 15px;
+  background-color: #232c43;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.keypad2 {
+  display: flex;
+  justify-content: space-between;
+  background-color: #232c43;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.key {
+  background-color: #eae3dc;
+  color: #232c43;
+  box-shadow: 5px #b4a597;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.key2 {
+  background-color: cadetblue;
+  width: 45%;
+  text-align: center;
+  padding: 10px;
+  margin: 0 1rem 1rem 1rem;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=style.css.map */
