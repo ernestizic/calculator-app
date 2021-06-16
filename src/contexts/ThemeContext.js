@@ -1,4 +1,4 @@
-import React, { createContext,useState} from 'react';
+import React, { createContext,useState, useEffect} from 'react';
 
 export const ThemeContext = createContext();
 
@@ -71,6 +71,44 @@ const ThemeContextProvider = (props) => {
         setIsLightTheme(false)
         setIsDarkTheme(true)
     }
+    
+    //1
+    useEffect(()=> {
+        const localTheme = localStorage.getItem('myTheme');
+        if (localTheme) {
+            setIsDarkTheme(JSON.parse(localTheme));
+        }
+    }, [])
+    
+    useEffect(()=> {
+        localStorage.setItem('myTheme', JSON.stringify(isDarkTheme))
+    });
+
+    //2
+    useEffect(()=> {
+        const localTheme = localStorage.getItem('mTheme');
+        if (localTheme) {
+            setIsLightTheme(JSON.parse(localTheme));
+        }
+    }, [])
+    
+    useEffect(()=> {
+        localStorage.setItem('mTheme', JSON.stringify(isLightTheme))
+    });
+
+    //3
+    useEffect(()=> {
+        const localTheme = localStorage.getItem('yTheme');
+        if (localTheme) {
+            setIsFineTheme(JSON.parse(localTheme));
+        }
+    }, [])
+    
+    useEffect(()=> {
+        localStorage.setItem('yTheme', JSON.stringify(isFineTheme))
+    });
+
+    
 
     return ( 
         <ThemeContext.Provider value={{isFineTheme: isFineTheme, isLightTheme: isLightTheme, light: light, dark: dark, fine: fine,
