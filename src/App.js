@@ -1,13 +1,17 @@
-import Header from "./components/Header";
-import Screen from "./components/Screen";
+import React from 'react';
+import { Dashboard } from './components/Dashboard';
+import ThemeContextProvider from './contexts/ThemeContext'
 
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Screen />
-    </div>
+    <ThemeContextProvider>
+      <div className="App">
+        <Dashboard />
+      </div>
+    </ThemeContextProvider>
+      
+    
   );
 }
 
