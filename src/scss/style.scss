@@ -64,6 +64,10 @@ body {
 .theme {
   display: flex;
 }
+.switch{
+  padding: 10px;
+  border-radius: 50%;
+}
 
 @media only screen and (max-width: 414px) {
   .App {
